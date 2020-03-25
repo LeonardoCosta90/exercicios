@@ -14,6 +14,9 @@ public class Main {
 	}
 
 	Scanner scanner = new Scanner(System.in);
+	
+	private final String TEXTO_INVALIDO = "INVALIDO";
+	
 	int idController = 1;
 
 	List<Cavalo> listCavalo = new ArrayList<Cavalo>();
@@ -36,9 +39,23 @@ public class Main {
 			System.out.println("6. Remover animal por id");
 			System.out.println("7. Exibir animais por categoria");
 			System.out.println("8. Sair\n");
-			System.out.print("Opção: ");
 
-			opcao = scanner.nextInt();
+			
+			try {
+
+				System.out.print("Opção: ");
+
+				opcao = scanner.nextInt();
+				scanner.nextLine();
+				
+				System.out.println(opcao);
+				
+			} catch (Exception e) {
+				scanner.next();
+				System.out.println("Um valor invalido foi digitado");
+				continue;
+				
+			}
 
 			switch (opcao) {
 
