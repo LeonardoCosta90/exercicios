@@ -118,7 +118,7 @@ public class Main {
 
 		int id = idControl();
 		String nome;
-		
+
 		System.out.println("Cadastro de girafa");
 
 		System.out.print("Nome da girafa: ");
@@ -197,68 +197,66 @@ public class Main {
 		System.out.println("Total de animais: " + listAnimal.size());
 
 	}
-	
-	
-private void deleteAnimalByID() {
-		
-	/*
+
+	private void deleteAnimalByID() {
+
 		int id;
 		System.out.println("Remoção de animal por id");
 		System.out.print("Digite a id do animal: ");
 		id = scanner.nextInt();
-		
+
 		try {
-			
-			for(int i = 0; i< listCavalo.size(); i++) {
-				
+
+			for (int i = 0; i < listCavalo.size(); i++) {
+
 				Cavalo cavalo = listCavalo.get(i);
-				if(cavalo.getId() == id) {
+				if (cavalo.getId() == id) {
 					listCavalo.remove(i);
 				}
-				
+
 			}
-			
-			for(int i = 0; i< listaDeGirafas.size(); i++) {
-				
-				Girafa girafa = listaDeGirafas.get(i);
-				if(girafa.getId() == id) {
-					listaDeGirafas.remove(i);
+
+			for (int i = 0; i < listGirafa.size(); i++) {
+
+				Girafa girafa = listGirafa.get(i);
+				if (girafa.getId() == id) {
+					listGirafa.remove(i);
 				}
-				
+
 			}
-			
-			for(int i = 0; i< listaDeAnimais.size(); i++) {
-				
-				Animal animal = listaDeAnimais.get(i);
-				
-				if(animal instanceof Cavalo) {
-					
+
+			for (int i = 0; i < listAnimal.size(); i++) {
+
+				Animal animal = listAnimal.get(i);
+
+				if (animal instanceof Cavalo) {
+
 					Cavalo cavalo = (Cavalo) animal;
-					if(cavalo.getId() == id) {
-						listaDeAnimais.remove(i);
+					if (cavalo.getId() == id) {
+						listAnimal.remove(i);
 					}
-					
+
 				}
-				
-				if(animal instanceof Girafa) {
-					
+
+				if (animal instanceof Girafa) {
+
 					Girafa girafa = (Girafa) animal;
-					if(girafa.getId() == id) {
-						listaDeAnimais.remove(i);
+					if (girafa.getId() == id) {
+						listAnimal.remove(i);
 					}
-					
+
 				}
-				
+
 			}
-			
-			mapAnimais.remove(id);
-			
-			System.out.println("Animal removido com sucesso.");
-			
+
+			mapAnimal.remove(id);
+
+			System.out.println("Animal removido.");
+
 		} catch (Exception e) {
-			System.out.println("Ocorreu um problema na tentativa de remover o animal: " + e);
-		}*/
-		
+			System.out.println("erro: " + e);
+		}
+
 	}
 
 	private int idControl() {
